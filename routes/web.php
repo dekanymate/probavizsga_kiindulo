@@ -28,3 +28,10 @@ Route::get('/dashboard', function () {
 require __DIR__ . '/auth.php';
 
 require __DIR__ . '/auth.php';
+
+//Szakdoga
+
+Route::get('/szakdogak', [SzakdogaController::class, 'index']);
+Route::post('/new-szakdogak', [SzakdogaController::class, 'store']);
+Route::put('/update-szakdogak', [SzakdogaController::class, 'update']);
+Route::delete('/delete-szakdogak', [SzakdogaController::class, 'destroy']);
